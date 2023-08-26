@@ -35,7 +35,7 @@ app.get("/questionaire",(req, res) => {
 // Route for fetching assessment data
 app.get('/get-assessment/:username', (req, res) => {
   const username = curruser;
-  const mongoUrl = 'mongodb+srv://shubham487:shubham487@cluster0.tjdpjef.mongodb.net/?retryWrites=true&w=majority';
+  const mongoUrl = 'mongodb+srv://user:password@projectname.database.mongodb.net/?retryWrites=true&w=majority';
   const dbName = 'psywellbeing' ;
 
   // Connect to MongoDB
@@ -77,7 +77,7 @@ app.post('/signup', (req, res) => {
     const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
-    const mongoUrl = 'mongodb+srv://shubham487:shubham487@cluster0.tjdpjef.mongodb.net/?retryWrites=true&w=majority';
+    const mongoUrl = 'mongodb+srv://user:password@projectname.database.mongodb.net/?retryWrites=true&w=majority';
     const dbName = 'psywellbeing';
 
     MongoClient.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true }).then((client) => {
@@ -116,7 +116,7 @@ app.post('/signup', (req, res) => {
 app.post('/signin', (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
-  const mongoUrl = 'mongodb+srv://shubham487:shubham487@cluster0.tjdpjef.mongodb.net/?retryWrites=true&w=majority';
+  const mongoUrl = 'mongodb+srv://user:password@projectname.database.mongodb.net/?retryWrites=true&w=majority';
   const dbName = 'psywellbeing';
 
   MongoClient.connect(mongoUrl, {useNewUrlParser: true, useUnifiedTopology:true}).then((client) => {
@@ -149,7 +149,7 @@ app.post('/save-assessments', (req, res) => {
   //console.log("in save-assesment")
   const assessmentsData = req.body;
   const username = curruser;
-  const mongoUrl = 'mongodb+srv://shubham487:shubham487@cluster0.tjdpjef.mongodb.net/?retryWrites=true&w=majority';
+  const mongoUrl = 'mongodb+srv://user:password@projectname.database.mongodb.net/?retryWrites=true&w=majority';
   const dbName = 'psywellbeing';
   //console.log(assessmentsData.assessments);
 
@@ -185,7 +185,7 @@ app.post('/save-assessments', (req, res) => {
 
 app.get('/get-assessment', (req, res) => {
   const username = curruser;
-  const mongoUrl = 'mongodb+srv://shubham487:shubham487@cluster0.tjdpjef.mongodb.net/?retryWrites=true&w=majority';
+  const mongoUrl = 'mongodb+srv://user:password@projectname.database.mongodb.net/?retryWrites=true&w=majority';
   const dbName = 'psywellbeing';
 
   MongoClient.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -223,3 +223,6 @@ app.get('/get-assessment', (req, res) => {
 app.listen(6969, () => {
     console.log("Log onto `http://localhost:6969/` to see full website")
 })
+
+//my key: 'mongodb+srv://shubham487:shubham487@cluster0.tjdpjef.mongodb.net/?retryWrites=true&w=majority'
+//This wont work for you
