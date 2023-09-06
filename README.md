@@ -23,7 +23,7 @@ npm install -g nodemon
 > ~~~
 > Enter ```Y``` and press ```Enter```
 
-Now you can see that the folder ```node_modules```, ```package.json``` and ```package.json``` files are created.
+Now you can see that the folder ```node_modules```, ```package.json``` and ```package-lock.json``` files are created.
 Now copy the downloaded files i.e., src and index.js files into the folder you made. 
 In the terminal, enter the following to make the project live.
 ~~~
